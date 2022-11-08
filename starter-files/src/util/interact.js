@@ -6,7 +6,10 @@ const web3 = createAlchemyWeb3(alchemyKey);
 const contractABI = require('../contract-abi.json');
 const contractAddress = '0x576E54e96B1a5c5F5eC52eD0a2AC500D9CF2Eb82';
 
-//export const helloWorldContract;
+export const helloWorldContract = new web3.eth.Contract(
+	contractABI,
+	contractAddress
+);
 
 export const loadCurrentMessage = async () => {};
 
