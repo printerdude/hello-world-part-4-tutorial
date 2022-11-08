@@ -11,7 +11,10 @@ export const helloWorldContract = new web3.eth.Contract(
 	contractAddress
 );
 
-export const loadCurrentMessage = async () => {};
+export const loadCurrentMessage = async () => {
+    const message = await helloWorldContract.methods.message().call();
+	return message;
+};
 
 export const connectWallet = async () => {};
 
